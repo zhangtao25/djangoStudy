@@ -1,7 +1,12 @@
 from django.db import models
 
 # Create your models here.
-# import mongoengine
-# class StudentModel(mongoengine.document):
-#     name = mongoengine.StringField(max_length=16)
-#     age = mongoengine.ImageField(default=0)
+from mongoengine import Document, StringField
+
+class User(Document):
+    user_id = StringField()
+    user_email = StringField()
+    user_password = StringField()
+    user_vcode_date = StringField()
+    user_vcode = StringField()
+    user_islive = StringField()

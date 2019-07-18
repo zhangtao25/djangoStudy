@@ -79,8 +79,9 @@ DATABASES = {
         'ENGINE': None
     }
 }
-
-
+from mongoengine import connect
+# connect('mangguojie')
+connect ('mangguojie' , host = '101.132.46.146' , port = 27017 )
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
